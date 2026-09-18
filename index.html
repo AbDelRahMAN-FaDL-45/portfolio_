@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Designer Portfolio — Brand, Packaging & Digital Campaigns</title>
+<meta name="Author" content="Abdelrahman Fadl">
+<!-- Open Graph for LinkedIn sharing -->
+<meta property="og:title" content="Abdelrahman Fadl — Brand & Visual Designer | 15+ Industries">
+<meta property="og:description" content="Brand identity, packaging, and digital campaigns for corporate clients. Production-ready design across 15+ industries.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="wolves-logo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f0ebe0;
+  --ink: #1a1a1a;
+  --accent: #c9a96e;
+  --muted: rgba(240,235,224,.35);
+  --sans: "DM Sans", sans-serif;
+  --serif: "DM Serif Display", serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--ink);
+  color: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 6vw;
+  gap: 4vw;
+}
+.hero-left { flex: 1 1 45%; }
+.hero-right { flex: 1 1 40%; display: flex; flex-direction: column; gap: 2rem; }
+
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5.5vw, 6rem);
+  line-height: 1.05;
+  color: var(--paper);
+}
+.hero-title {
+  font-family: var(--sans);
+  font-size: clamp(.85rem, 1.2vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--accent);
+  margin-top: 1rem;
+}
+.hero-bio {
+  font-size: clamp(.9rem, 1.1vw, 1.05rem);
+  color: rgba(240,235,224,.7);
+  max-width: 480px;
+  margin-top: 1.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--muted);
+  margin-top: .4rem;
+}
+
+.hero-clients {
+  margin-top: 2rem;
+}
+.hero-clients p {
+  font-size: .65rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: .5rem;
+  opacity: .5;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6vw;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--paper);
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--paper);
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .3s;
+}
+.nav-links a:hover { opacity: 1; }
+
+/* ===== SECTIONS ===== */
+.section-label {
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* ===== PROJECTS ===== */
+.project-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.proj-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4vw;
+  align-items: flex-start;
+}
+.proj-gallery {
+  flex: 1 1 55%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #111;
+  min-height: 520px;
+}
+.gallery-track {
+  display: flex;
+  transition: transform .6s cubic-bezier(.25,.46,.45,.94);
+  height: 100%;
+}
+.gallery-slide {
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+.gallery-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Special slide types */
+.gallery-slide.brand-mark { background: #fff; }
+.gallery-slide.brand-mark img { max-width: 80%; max-height: 80%; }
+
+.gallery-slide.packaging { background: #f5f5f5; }
+.gallery-slide.packaging img { max-height: 90%; max-width: 90%; }
+
+.gallery-slide.banner-slide { background: #0a0a0a; }
+.gallery-slide.banner-slide img { max-width: 95%; max-height: 95%; }
+
+.gallery-nav {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  z-index: 10;
+}
+.g-arr {
+  background: none;
+  border: 1px solid rgba(240,235,224,.25);
+  color: var(--paper);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+.g-arr:hover { background: var(--paper); color: var(--ink); }
+.g-dots { display: flex; gap: .5rem; }
+.g-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(240,235,224,.25);
+  cursor: pointer;
+  transition: background .3s;
+}
+.g-dot.on { background: var(--accent); }
+
+.proj-info {
+  flex: 1 1 35%;
+  padding-top: .5rem;
+}
+.proj-num {
+  font-size: .7rem;
+  letter-spacing: .14em;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+.proj-cat {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--muted);
+  margin-bottom: .8rem;
+}
+.proj-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.proj-desc {
+  font-size: .9rem;
+  color: rgba(240,235,224,.75);
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+}
+.proj-desc p { margin-bottom: .8rem; }
+.proj-desc strong { color: var(--paper); }
+.proj-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.proj-tool {
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .35rem .7rem;
+  border: 1px solid rgba(240,235,224,.15);
+  border-radius: 2px;
+  color: var(--muted);
+}
+
+/* ===== DESIGNS LOOK AT ===== */
+.look-section {
+  padding: 8vw 0;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.look-header {
+  padding: 0 6vw;
+  margin-bottom: 3vw;
+}
+.look-slideshow {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.look-track {
+  display: flex;
+  transition: transform .8s cubic-bezier(.25,.46,.45,.94);
+}
+.look-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  min-height: 70vh;
+}
+.look-slide img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===== ABOUT ===== */
+.about-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+  max-width: 900px;
+}
+.about-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+.about-section p {
+  font-size: .95rem;
+  color: rgba(240,235,224,.75);
+  margin-bottom: 1rem;
+  max-width: 640px;
+}
+
+/* ===== SERVICES ===== */
+.services-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-card {
+  border: 1px solid rgba(240,235,224,.1);
+  padding: 1.5rem;
+  border-radius: 4px;
+  transition: border-color .3s;
+}
+.service-card:hover { border-color: var(--accent); }
+.service-card h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+.service-card p {
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+  text-align: center;
+}
+.contact-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.contact-email {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: var(--ink);
+  border: none;
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-size: .85rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform .3s, box-shadow .3s;
+}
+.contact-email:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201,169,110,.25);
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.contact-links a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all .3s;
+}
+.contact-links a:hover {
+  color: var(--paper);
+  border-bottom-color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 2rem 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; padding: 8vw; }
+  .hero-stats { gap: 1.5rem; }
+  .proj-layout { flex-direction: column; }
+  .proj-gallery { min-height: 360px; }
+  .nav-links { gap: 1rem; }
+  .look-slide { min-height: 50vh; }
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== SCROLL REVEALS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== HOVER EFFECTS ===== */
+.project-section:hover .proj-gallery {
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.service-card {
+  transform: translateY(0);
+  transition: transform .4s ease, border-color .3s, box-shadow .4s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(201,169,110,.08);
+}
+.gallery-slide img {
+  transition: transform .6s cubic-bezier(.25,.46,.45,.94), filter .6s ease;
+}
+.gallery-slide:hover img {
+  transform: scale(1.02);
+}
+
+/* ===== PREMIUM SPACING ===== */
+.project-section { padding: 10vw 6vw; }
+.about-section { padding: 10vw 6vw; }
+.services-section { padding: 10vw 6vw; }
+.contact-section { padding: 10vw 6vw; }
+
+/* ===== COLOR PALETTE SWATCHES ===== */
+.proj-palette {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.palette-label {
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--muted);
+  margin-bottom: .6rem;
+}
+.palette-swatches {
+  display: flex;
+  gap: .6rem;
+}
+.palette-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(240,235,224,.15);
+  position: relative;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.palette-swatch:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+.palette-swatch::after {
+  content: attr(data-color);
+  position: absolute;
+  bottom: -1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .5rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.palette-swatch:hover::after {
+  opacity: 1;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial-card {
+  border: 1px solid rgba(240,235,224,.08);
+  padding: 2rem;
+  border-radius: 4px;
+  position: relative;
+}
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--serif);
+  font-size: 4rem;
+  color: var(--accent);
+  opacity: .3;
+  position: absolute;
+  top: .5rem;
+  left: 1.5rem;
+  line-height: 1;
+}
+.testimonial-text {
+  font-size: .9rem;
+  color: rgba(240,235,224,.8);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.testimonial-name {
+  font-size: .8rem;
+  font-weight: 500;
+}
+.testimonial-role {
+  font-size: .65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* ===== WHY ME ===== */
+.why-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.why-card {
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--accent);
+}
+.why-card h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin-bottom: .6rem;
+}
+.why-card p {
+  font-size: .85rem;
+  color: rgba(240,235,224,.7);
+  line-height: 1.6;
+}
+.why-num {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--accent);
+  opacity: .4;
+  line-height: 1;
+  margin-bottom: .5rem;
+}
+
+/* ===== PROCESS ===== */
+.process-section {
+  padding: 8vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+}
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+.process-step {
+  flex: 1 1 200px;
+  padding: 2rem;
+  position: relative;
+}
+.process-step::before {
+  content: attr(data-step);
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--accent);
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+}
+.process-step h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: .5rem;
+}
+.process-step p {
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.process-connector {
+  position: absolute;
+  top: 3.5rem;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: .3;
+}
+
+/* ===== PROJECT INDEX ===== */
+.project-index {
+  padding: 4vw 6vw;
+  border-top: 1px solid rgba(240,235,224,.08);
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.project-index::-webkit-scrollbar { display: none; }
+.proj-thumb {
+  flex: 0 0 auto;
+  width: 120px;
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .3s ease;
+  text-decoration: none;
+}
+.proj-thumb:hover, .proj-thumb.active {
+  opacity: 1;
+}
+.proj-thumb img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: .4rem;
+}
+.proj-thumb span {
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  display: block;
+  text-align: center;
+}
+
+/* ===== ENHANCED CONTACT ===== */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.contact-option {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1.5rem;
+  border: 1px solid rgba(240,235,224,.15);
+  border-radius: 2px;
+  color: var(--paper);
+  text-decoration: none;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  transition: all .3s ease;
+}
+.contact-option:hover {
+  border-color: var(--accent);
+  background: rgba(201,169,110,.05);
+}
+.contact-option.primary {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+  font-weight: 500;
+}
+.contact-option.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201,169,110,.25);
+}
+
+/* ===== DOWNLOAD BAR ===== */
+.download-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26,26,26,.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(240,235,224,.1);
+  padding: 1rem 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  transform: translateY(100%);
+  transition: transform .4s ease;
+}
+.download-bar.visible {
+  transform: translateY(0);
+}
+.download-bar p {
+  font-size: .8rem;
+  color: var(--muted);
+}
+.download-bar a {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  padding: .5rem 1.2rem;
+  border-radius: 2px;
+  transition: all .3s;
+}
+.download-bar a:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+</style>
+<base target="_blank">
+<base target="_blank">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="Geometric Glyphs Abdelrahman Fadl.png" alt="AF" style="height:24px;width:auto;"><span style="font-size:.85rem;letter-spacing:.05em;">Abdelrahman Fadl</span></a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1 class="hero-name">Abdelrahman Fadl</h1>
+    <p class="hero-title">Brand & Visual Designer for Corporate Clients</p>
+    <p class="hero-bio">
+      I design brand identities, packaging systems, and digital campaigns that solve business problems. 
+      From FMCG labels to healthcare apps to restaurant menus — I build visual systems that work across every touchpoint.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">7</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">15+</span>
+        <span class="stat-label">Industries</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Deliverables</span>
+      </div>
+    </div>
+    <div class="hero-clients">
+      <p>Trusted by</p>
+      <div class="client-list">
+        <span>Wolves Café</span>
+        <span>Attoveloce</span>
+        <span>Temo Padel</span>
+        <span>Dolphin Marine</span>
+        <span>Arab Delivery</span>
+        <span>Mimet Café</span>
+        <span>and much more</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Optional: leave empty or add a hero image -->
+  </div>
+</section>
+
+
+<!-- PROJECT INDEX -->
+<div class="project-index">
+  <a href="#wolves" class="proj-thumb active">
+    <img src="wolves-logo.jpg" alt="">
+    <span>Wolves Café</span>
+  </a>
+  <a href="#mimet" class="proj-thumb">
+    <img src="mimet-suhoor.jpg" alt="">
+    <span>Mimet Café</span>
+  </a>
+  <a href="#attoveloce" class="proj-thumb">
+    <img src="attoveloce-event.jpg" alt="">
+    <span>Attoveloce</span>
+  </a>
+  <a href="#logos" class="proj-thumb">
+    <img src="naqawa-logo.jpg" alt="">
+    <span>Logos</span>
+  </a>
+  <a href="#banners" class="proj-thumb">
+    <img src="alsado-banner.jpg" alt="">
+    <span>Banners</span>
+  </a>
+  <a href="#cleaner" class="proj-thumb">
+    <img src="cleaner-front.jpg" alt="">
+    <span>Cleaner</span>
+  </a>
+  <a href="#mixed" class="proj-thumb">
+    <img src="coffee-poster.jpg" alt="">
+    <span>Mixed</span>
+  </a>
+</div>
+
+<!-- SELECTED WORK -->
+<section id="work">
+
+<!-- PROJECT 1: WOLVES CAFÉ -->
+<div class="project-section" id="wolves">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-wolves">
+      <div class="gallery-track">
+        <div class="gallery-slide brand-mark">
+          <img src="wolves-logo.jpg" alt="Wolves Café brand identity logo on black background">
+        </div>
+        <div class="gallery-slide">
+          <img src="wolves-promo1.jpg" alt="Wolves Café summer promotion campaign">
+        </div>
+        <div class="gallery-slide">
+          <img src="wolves-promo2.jpg" alt="Wolves Café combo offer promotional design">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-wolves',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-wolves',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-wolves',1)"></button>
+          <button class="g-dot" onclick="goSlide('gal-wolves',2)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-wolves',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">01</div>
+      <div class="proj-cat">Brand Identity & Campaign Design</div>
+      <h3 class="proj-title">Wolves Café</h3>
+      <div class="proj-desc">
+        <p><strong>The Brief:</strong> A new coffee shop in Port Said's crowded marina district needed to avoid being "just another café." The owner had the location and the beans — but no visual identity that would make people remember the name.</p>
+        <p><strong>The Tension:</strong> Every competitor used brown tones and generic coffee icons. Blending in meant dying slowly. The brand needed to feel dangerous, memorable, and premium without alienating families.</p>
+        <p><strong>The Turn:</strong> I developed a wolf+coffee cup mark with aggressive geometry and high-contrast black/gold palette. The wolf symbolized loyalty (pack mentality = community), while the crown detail signaled "king of the block."</p>
+        <p><strong>The Resolution:</strong> The identity launched across 12 touchpoints — cups, signage, social campaigns, and staff uniforms. Within two months, the café became a recognizable landmark in the area, with customers specifically requesting "the wolf coffee place."</p>
+        <p><strong>Deliverables:</strong> Logo system (primary + reversed + monochrome), social media campaign templates, promotional posters, menu design, branded cup mockups, storefront signage specs.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Palette</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#0a0a0a;" data-color="Ink Black"></div>
+          <div class="palette-swatch" style="background:#c9a96e;" data-color="Wolf Gold"></div>
+          <div class="palette-swatch" style="background:#f0ebe0;" data-color="Cream"></div>
+          <div class="palette-swatch" style="background:#8b0000;" data-color="Deep Red"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Illustrator</span>
+        <span class="proj-tool">Photoshop</span>
+        <span class="proj-tool">Brand Strategy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 2: MIMET CAFÉ -->
+<div class="project-section" id="mimet">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-mimet">
+      <div class="gallery-track">
+        <div class="gallery-slide">
+          <img src="mimet-suhoor.jpg" alt="Mimet Café Ramadan Suhoor menu design with lanterns and crescent moon theme">
+        </div>
+        <div class="gallery-slide">
+          <img src="mimet-discount.jpg" alt="Mimet Café 25% discount card for bank employees">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-mimet',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-mimet',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mimet',1)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-mimet',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">02</div>
+      <div class="proj-cat">Seasonal Campaign & B2B Promotional Design</div>
+      <h3 class="proj-title">Mimet Café</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Mimet Café needed to attract customers during Ramadan with a special Suhoor menu, and build a corporate partnership program to drive weekday traffic.</p>
+        <p><strong>My Role:</strong> Full seasonal campaign design — Suhoor menu (print + digital), corporate discount card system, and branded promotional assets.</p>
+        <p><strong>The Solution:</strong> Developed a cohesive Ramadan visual theme using traditional lanterns, crescent motifs, and a rich green/gold palette that respected cultural context while feeling modern. Created a premium discount card for bank employees with clear value proposition.</p>
+        <p><strong>Results:</strong> Menu used across in-store displays and social media; discount card distributed to 200+ bank employees, driving 35% increase in weekday morning traffic.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Palette</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#1a472a;" data-color="Ramadan Green"></div>
+          <div class="palette-swatch" style="background:#c9a96e;" data-color="Lantern Gold"></div>
+          <div class="palette-swatch" style="background:#f5f0e6;" data-color="Parchment"></div>
+          <div class="palette-swatch" style="background:#8b1a1a;" data-color="Crimson"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Illustrator</span>
+        <span class="proj-tool">Photoshop</span>
+        <span class="proj-tool">Print Design</span>
+        <span class="proj-tool">B2B Marketing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 3: ATTOVELOCE -->
+<div class="project-section" id="attoveloce">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-attoveloce">
+      <div class="gallery-track">
+        <div class="gallery-slide">
+          <img src="attoveloce-event.jpg" alt="Attoveloce Day of Care with Aloe Vera social media campaign">
+        </div>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">03</div>
+      <div class="proj-cat">Social Media Campaign & Event Marketing</div>
+      <h3 class="proj-title">Attoveloce</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Pharmaceutical/beauty brand needed to promote a sponsored "Day of Care" event featuring their aloe vera product line, driving both awareness and foot traffic to partner locations.</p>
+        <p><strong>My Role:</strong> Social media campaign design — event announcement post, visual identity for digital promotion, and branded asset templates.</p>
+        <p><strong>The Solution:</strong> Created a clean, medical-trust aesthetic using purple (brand color) and teal (freshness/aloe association) with organic leaf motifs. Designed clear information hierarchy: event name → sponsor → benefits → call-to-action.</p>
+        <p><strong>Results:</strong> Campaign used across Facebook, Instagram, and WhatsApp business channels; event saw 200+ attendees at partner locations.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Palette</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#5b2d8a;" data-color="Brand Purple"></div>
+          <div class="palette-swatch" style="background:#2a9d8f;" data-color="Aloe Teal"></div>
+          <div class="palette-swatch" style="background:#ffffff;" data-color="Clinical White"></div>
+          <div class="palette-swatch" style="background:#e8e0f0;" data-color="Lavender Mist"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Illustrator</span>
+        <span class="proj-tool">Photoshop</span>
+        <span class="proj-tool">Social Media Strategy</span>
+        <span class="proj-tool">Event Marketing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 4: LOGO COLLECTION -->
+<div class="project-section" id="logos">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-logos">
+      <div class="gallery-track">
+        <div class="gallery-slide brand-mark">
+          <img src="naqawa-logo.jpg" alt="Naqawa Hijab logo - lotus flower mark with bilingual typography">
+        </div>
+        <div class="gallery-slide brand-mark">
+          <img src="rivus-logo.png" alt="Rivus logo - abstract interlocking wave mark">
+        </div>
+        <div class="gallery-slide brand-mark">
+          <img src="gamehub-logo.jpg" alt="Game Hub logo - eagle gaming mark with bold typography">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-logos',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-logos',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-logos',1)"></button>
+          <button class="g-dot" onclick="goSlide('gal-logos',2)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-logos',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">04</div>
+      <div class="proj-cat">Brand Identity & Logo Design</div>
+      <h3 class="proj-title">Brand Marks Collection</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Three distinct brands needed memorable, scalable marks that communicated their core identity instantly across digital and physical touchpoints.</p>
+        <p><strong>Naqawa Hijab</strong> — Modest fashion brand required an elegant, feminine mark. Developed a lotus flower symbol in deep magenta with refined Arabic calligraphy and clean English lockup.</p>
+        <p><strong>Rivus</strong> — Abstract brand needed a dynamic, modern mark. Created an interlocking wave/circular system suggesting flow and connection. High-contrast black and white ensures impact at any scale.</p>
+        <p><strong>Game Hub</strong> — Gaming community platform needed bold, aggressive energy. Designed an eagle-in-flight mark integrated into a "G" monogram, paired with heavy sans-serif typography.</p>
+        <p><strong>Results:</strong> All three marks in active use across their respective brand applications. Naqawa applied to product packaging; Rivus used as primary brand asset; Game Hub adopted across Discord, Twitch, and merchandise.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Systems</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#8b1c4a;" data-color="Naqawa Magenta"></div>
+          <div class="palette-swatch" style="background:#1a1a1a;" data-color="Rivus Black"></div>
+          <div class="palette-swatch" style="background:#ffffff;" data-color="Rivus White"></div>
+          <div class="palette-swatch" style="background:#e85d04;" data-color="Game Hub Orange"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Illustrator</span>
+        <span class="proj-tool">Logo Design</span>
+        <span class="proj-tool">Brand Strategy</span>
+        <span class="proj-tool">Typography</span>
+        <span class="proj-tool">Symbol Design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 5: BANNERS COLLECTION -->
+<div class="project-section" id="banners">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-banners">
+      <div class="gallery-track">
+        <div class="gallery-slide banner-slide">
+          <img src="alsado-banner.jpg" alt="Al-ledo supermarket banner — grocery retail digital ad">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="axon-banner.jpg" alt="AXON healthcare tech platform poster — medical AI startup">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="lumiere-banner.jpg" alt="Lumière de Nour Elghitany beauty brand banner">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="murad-electronics.jpg" alt="Murad Electronics banner — tech accessories store neon campaign">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="french-salamiya.jpg" alt="Fresh Al-Salamiya poultry shop banner — food retail advertising">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="streeto-banner.jpg" alt="STREETO streetwear fashion banner — urban clothing brand">
+        </div>
+        <div class="gallery-slide banner-slide">
+          <img src="happy-home.jpg" alt="Al-Beit Al-Saeed antiques banner — vintage collectibles shop">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-banners',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-banners',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',1)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',2)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',3)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',4)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',5)"></button>
+          <button class="g-dot" onclick="goSlide('gal-banners',6)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-banners',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">05</div>
+      <div class="proj-cat">Digital Advertising & Social Media Banners</div>
+      <h3 class="proj-title">Multi-Brand Banner Campaigns</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Seven distinct businesses needed high-impact digital banners that would stop the scroll, communicate value instantly, and drive clicks or foot traffic.</p>
+        <p><strong>My Role:</strong> End-to-end banner design for social media, web headers, and digital advertising across retail, tech, beauty, food, fashion, and antiques sectors.</p>
+        <p><strong>The Solution:</strong> Developed unique visual systems per brand rather than applying a one-size-fits-all template — from Al-lido's trust-building green/gold grocery aesthetic to Murad Electronics' neon cyber-punk tech vibe to STREETO's grunge streetwear energy.</p>
+        <p><strong>Results:</strong> All banners deployed across Facebook, Instagram, and WhatsApp status channels. Clients reported increased engagement and direct inquiries via banner-embedded contact methods.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Systems</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#1a5f2a;" data-color="Al-Sado Green"></div>
+          <div class="palette-swatch" style="background:#c9a96e;" data-color="Retail Gold"></div>
+          <div class="palette-swatch" style="background:#7c3aed;" data-color="Murad Neon"></div>
+          <div class="palette-swatch" style="background:#dc2626;" data-color="Food Red"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Photoshop</span>
+        <span class="proj-tool">Illustrator</span>
+        <span class="proj-tool">Social Media Ads</span>
+        <span class="proj-tool">Digital Marketing</span>
+        <span class="proj-tool">Brand Adaptation</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 6: CLEANER -->
+<div class="project-section" id="cleaner">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-cleaner">
+      <div class="gallery-track">
+        <div class="gallery-slide packaging">
+          <img src="cleaner-front.jpg" alt="Dish Cleaner bottle packaging front — lime variant, ultra concentrated formula">
+        </div>
+        <div class="gallery-slide packaging">
+          <img src="cleaner-back.jpg" alt="Dish Cleaner bottle packaging back — ingredients, usage instructions, regulatory compliance">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-cleaner',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-cleaner',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-cleaner',1)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-cleaner',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">06</div>
+      <div class="proj-cat">Packaging Design, Logo Design & Product Labeling</div>
+      <h3 class="proj-title">Cleaner — Dish Cleaner</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Cleaning product manufacturer needed a complete packaging system for a new dish soap line that would stand out on crowded supermarket shelves, communicate efficacy instantly, and meet Egyptian regulatory requirements for chemical products.</p>
+        <p><strong>My Role:</strong> Full brand creation — logo design, primary packaging label (front & back), product visualization, and promotional pricing integration.</p>
+        <p><strong>The Solution:</strong> Created the "Dish Cleaner / كلينر" bilingual wordmark with a bold, trustworthy blue primary supported by energetic yellow and appetite-red accents. Front label leads with product benefit and appetite-triggering lime photography. Back label delivers full regulatory compliance: ingredients, warnings, usage directions, manufacturer data, barcode, and recycling symbols.</p>
+        <p><strong>Results:</strong> Packaging approved for mass production; product launched with special introductory pricing. Label system designed for easy flavor/scent variant swapping while maintaining brand architecture.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Palette</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#0047ab;" data-color="Trust Blue"></div>
+          <div class="palette-swatch" style="background:#ffd700;" data-color="Energy Yellow"></div>
+          <div class="palette-swatch" style="background:#dc143c;" data-color="Action Red"></div>
+          <div class="palette-swatch" style="background:#f8f8f8;" data-color="Clean White"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Illustrator</span>
+        <span class="proj-tool">Photoshop</span>
+        <span class="proj-tool">Packaging Design</span>
+        <span class="proj-tool">Logo Design</span>
+        <span class="proj-tool">Regulatory Compliance</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 7: MIXED DELIVERABLES -->
+<div class="project-section" id="mixed">
+  <div class="proj-layout">
+    <div class="proj-gallery" id="gal-mixed">
+      <div class="gallery-track">
+        <div class="gallery-slide">
+          <img src="bena-pizza.jpg" alt="Bena Pizza Kings Back promotional poster">
+        </div>
+        <div class="gallery-slide">
+          <img src="fish-dish.jpg" alt="Fish Dish seafood restaurant Best in the Ocean banner">
+        </div>
+        <div class="gallery-slide">
+          <img src="padel-poster.jpg" alt="Temo Padel 1st Place tournament winner poster">
+        </div>
+        <div class="gallery-slide">
+          <img src="coffee-poster.jpg" alt="Coffee and chocolate splash 3D promotional poster">
+        </div>
+        <div class="gallery-slide">
+          <img src="flags-poster.jpg" alt="Qalbuk Maana heart health awareness poster">
+        </div>
+        <div class="gallery-slide">
+          <img src="porto-menu.jpg" alt="Porto cafe full menu design hot drinks smoothies desserts">
+        </div>
+        <div class="gallery-slide">
+          <img src="dolphin-shirt.jpg" alt="Dolphin Marine polo shirt uniform front and back design">
+        </div>
+        <div class="gallery-slide">
+          <img src="nano-card.jpg" alt="Nano Concrete business card">
+        </div>
+        <div class="gallery-slide">
+          <img src="arab-delivery-card.jpg" alt="Arab Delivery business card with mascot">
+        </div>
+        <div class="gallery-slide">
+          <img src="arab-delivery-sticker.jpg" alt="Arab Delivery circular sticker logo">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="g-arr prev" onclick="moveSlide('gal-mixed',-1)">‹</button>
+        <div class="g-dots">
+          <button class="g-dot on" onclick="goSlide('gal-mixed',0)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',1)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',2)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',3)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',4)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',5)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',6)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',7)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',8)"></button>
+          <button class="g-dot" onclick="goSlide('gal-mixed',9)"></button>
+        </div>
+        <button class="g-arr next" onclick="moveSlide('gal-mixed',1)">›</button>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-num">07</div>
+      <div class="proj-cat">Posters, Menus, Apparel & Print Branding</div>
+      <h3 class="proj-title">Mixed Deliverables Collection</h3>
+      <div class="proj-desc">
+        <p><strong>The Challenge:</strong> Multiple clients across unrelated sectors needed fast, high-impact design deliverables — from a pizza shop comeback campaign to a marine engineering uniform to a delivery service identity system.</p>
+        <p><strong>My Role:</strong> End-to-end design execution across posters, menus, apparel, business cards, and branded stickers — each requiring different production specs and visual languages.</p>
+        <p><strong>Solution highlights:</strong> Bena Pizza "Kings Back" comeback poster with crown icon and repeating pizza pattern. Fish Dish "Best in the Ocean" seafood banner with custom fish-letter typography. 3D liquid splash coffee composite. Porto cafe full trifold menu with 40+ items. Dolphin Marine corporate uniform with anchor/sailboat mark. Arab Delivery complete brand identity with mascot character and circular vehicle sticker.</p>
+        <p><strong>Results:</strong> All deliverables went straight to production — printed menus in active use, shirts embroidered and distributed to marine staff, delivery stickers applied to fleet vehicles, posters deployed across social and print.</p>
+      </div>
+      <div class="proj-palette">
+        <p class="palette-label">Color Systems</p>
+        <div class="palette-swatches">
+          <div class="palette-swatch" style="background:#0f4c5c;" data-color="Fish Dish Teal"></div>
+          <div class="palette-swatch" style="background:#e63946;" data-color="Bena Pizza Red"></div>
+          <div class="palette-swatch" style="background:#6b2c91;" data-color="Coffee Plum"></div>
+          <div class="palette-swatch" style="background:#2b2d42;" data-color="Dolphin Navy"></div>
+        </div>
+      </div>
+      <div class="proj-tools">
+        <span class="proj-tool">Adobe Photoshop</span>
+        <span class="proj-tool">Illustrator</span>
+        <span class="proj-tool">3D Compositing</span>
+        <span class="proj-tool">Apparel Design</span>
+        <span class="proj-tool">Print Production</span>
+        <span class="proj-tool">Character Design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- DESIGNS LOOK AT -->
+<section class="look-section">
+  <div class="look-header">
+    <p class="section-label">Selected Frames</p>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);">Designs Look At</h2>
+  </div>
+  <div class="look-slideshow" id="look-slideshow">
+    <div class="look-track" id="look-track">
+      <div class="look-slide"><img src="wolves-logo.jpg" alt="Wolves Café"></div>
+      <div class="look-slide"><img src="wolves-promo1.jpg" alt="Wolves summer promo"></div>
+      <div class="look-slide"><img src="mimet-suhoor.jpg" alt="Mimet Suhoor menu"></div>
+      <div class="look-slide"><img src="attoveloce-event.jpg" alt="Attoveloce event"></div>
+      <div class="look-slide"><img src="naqawa-logo.jpg" alt="Naqawa Hijab"></div>
+      <div class="look-slide"><img src="rivus-logo.png" alt="Rivus"></div>
+      <div class="look-slide"><img src="gamehub-logo.jpg" alt="Game Hub"></div>
+      <div class="look-slide"><img src="alsado-banner.jpg" alt="Al-Sado supermarket"></div>
+      <div class="look-slide"><img src="streeto-banner.jpg" alt="STREETO streetwear"></div>
+      <div class="look-slide"><img src="murad-electronics.jpg" alt="Murad Electronics"></div>
+      <div class="look-slide"><img src="cleaner-front.jpg" alt="Dish Cleaner packaging"></div>
+      <div class="look-slide"><img src="coffee-poster.jpg" alt="3D coffee splash poster"></div>
+      <div class="look-slide"><img src="arab-delivery-sticker.jpg" alt="Arab Delivery brand"></div>
+      <div class="look-slide"><img src="dolphin-shirt.jpg" alt="Dolphin Marine uniform"></div>
+      <div class="look-slide"><img src="porto-menu.jpg" alt="Porto menu"></div>
+    </div>
+    <div class="gallery-nav" style="bottom:2rem;">
+      <button class="g-arr prev" onclick="moveLook(-1)">‹</button>
+      <button class="g-arr next" onclick="moveLook(1)">›</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <p class="section-label">Client Words</p>
+  <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);">What Clients Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-text">Abdelrahman didn't just design our menu — he understood Ramadan timing, customer flow, and print costs. The discount card campaign brought bank employees we never reached before.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MS</div>
+        <div>
+          <div class="testimonial-name">Mohamed Samir</div>
+          <div class="testimonial-role">Owner, Mimet Café</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">The packaging design stood out immediately on shelf tests. The regulatory back label was approved by the factory on first submission — no revisions needed.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">AK</div>
+        <div>
+          <div class="testimonial-name">Ahmed Khaled</div>
+          <div class="testimonial-role">Product Manager, Cleaner</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">We gave him 7 different businesses and got 7 completely different visual languages. No templates, no copy-paste. Each banner felt built for that specific brand.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">RA</div>
+        <div>
+          <div class="testimonial-name">Rana Adel</div>
+          <div class="testimonial-role">Marketing Director, Multi-Brand Agency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <p class="section-label">About</p>
+  <h2>Problem-first design for businesses that need results.</h2>
+  <p>
+    I'm a graphic designer based in Egypt with 2+ years of experience building visual systems for companies across 15+ industries. My work spans brand identity, packaging, social media campaigns, print design, apparel, and 3D visualization.
+  </p>
+  <p>
+    I don't start with aesthetics — I start with the business problem. Whether it's a coffee shop needing to differentiate in a saturated market, a pharmaceutical company promoting an event, or a cleaning product fighting for shelf attention, every design decision is tied to a measurable outcome.
+  </p>
+  <p>
+    I work in both Arabic and English, and I understand the cultural and regulatory nuances of designing for Middle Eastern markets — from Ramadan campaign sensitivity to product label compliance.
+  </p>
+</section>
+
+
+<!-- WHY ME -->
+<section class="why-section" id="why">
+  <p class="section-label">Why Work With Me</p>
+  <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);">Three reasons companies hire me back</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <h4>No Learning Curve</h4>
+      <p>I've worked across 15+ industries — FMCG, pharma, F&B, tech, fashion, sports, marine, construction. You won't pay for me to research your market. I already understand shelf psychology, regulatory labels, Ramadan campaigns, and B2B promotions.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <h4>Production-Ready Files</h4>
+      <p>Every deliverable goes straight to print or publish. Packaging includes bleed and dielines. Social posts are platform-optimized. Uniforms specify embroidery vs. screen print. I design for the real world, not the portfolio.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <h4>Arabic + English Fluency</h4>
+      <p>Bilingual design isn't translation — it's cultural adaptation. I understand when Arabic should lead, when English adds prestige, and how to balance both without visual chaos. Critical for Middle Eastern markets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <p class="section-label">Services</p>
+  <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);">What I Deliver</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h4>Brand Identity & Logo Design</h4>
+      <p>Complete mark systems, color architecture, and typography lockups that scale from favicon to billboard.</p>
+    </div>
+    <div class="service-card">
+      <h4>Packaging Design</h4>
+      <p>Product labels, bottle wraps, and shelf-ready packaging with regulatory compliance and variant systems.</p>
+    </div>
+    <div class="service-card">
+      <h4>Social Media Campaigns</h4>
+      <p>Scroll-stopping posts, event promotions, and banner suites optimized for Facebook, Instagram, and WhatsApp.</p>
+    </div>
+    <div class="service-card">
+      <h4>Print & Menu Design</h4>
+      <p>Restaurant menus, discount cards, business cards, and promotional print with production-ready files.</p>
+    </div>
+    <div class="service-card">
+      <h4>Apparel & Uniform Design</h4>
+      <p>Corporate polo shirts, team uniforms, and branded merchandise with embroidery and screen-print specs.</p>
+    </div>
+    <div class="service-card">
+      <h4>3D Visualization & Compositing</h4>
+      <p>Photorealistic product mockups, liquid splash effects, and composite imagery for high-impact advertising.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <p class="section-label">How I Work</p>
+  <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);">From brief to deliverable in 4 steps</h2>
+  <div class="process-steps">
+    <div class="process-connector"></div>
+    <div class="process-step" data-step="01">
+      <h4>Discovery</h4>
+      <p>30-minute call to understand your business problem, competitors, and constraints. I ask about shelf position, target demographic, and production specs — not just "what colors do you like."</p>
+    </div>
+    <div class="process-step" data-step="02">
+      <h4>Strategy</h4>
+      <p>Color psychology, competitor audit, and 2-3 visual directions. You get mood boards with rationale — not random Pinterest dumps. Every choice connects to your business goal.</p>
+    </div>
+    <div class="process-step" data-step="03">
+      <h4>Design</h4>
+      <p>2 rounds of revisions with clear feedback structure. No unlimited changes that drain budget — focused iterations that move toward the best solution fast.</p>
+    </div>
+    <div class="process-step" data-step="04">
+      <h4>Delivery</h4>
+      <p>Production files, source files, and a style guide. Packaging includes print-ready PDFs with bleed. Digital assets come in all platform sizes. You're never stuck with one format.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <p class="section-label">Start a Project</p>
+  <h2>Let's build something that works.</h2>
+  <p>Tell me what you're launching, rebranding, or promoting — and I'll reply within 24 hours.</p>
+  <div class="contact-options">
+    <a href="https://mail.google.com/mail/?view=cm&to=abdelrahmanfadl05@gmail.com" class="contact-option primary" target="_blank" rel="noopener">Send Email</a>
+    <a href="https://wa.me/201211407327" class="contact-option" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="Geometric Glyphs Abdelrahman Fadl.png" alt="Abdelrahman Fadl" style="height:32px;width:auto;opacity:.9;">
+  <span>All work shown is original</span>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const galleries = {};
+
+function initGallery(id) {
+  const gal = document.getElementById(id);
+  const track = gal.querySelector('.gallery-track');
+  const slides = track.querySelectorAll('.gallery-slide');
+  const dots = gal.querySelectorAll('.g-dot');
+  galleries[id] = { track, slides, dots, current: 0, total: slides.length };
+  updateGallery(id);
+}
+
+function updateGallery(id) {
+  const g = galleries[id];
+  g.track.style.transform = `translateX(-${g.current * 100}%)`;
+  g.dots.forEach((d, i) => d.classList.toggle('on', i === g.current));
+}
+
+function moveSlide(id, dir) {
+  const g = galleries[id];
+  g.current = (g.current + dir + g.total) % g.total;
+  updateGallery(id);
+}
+
+function goSlide(id, idx) {
+  galleries[id].current = idx;
+  updateGallery(id);
+}
+
+// Look slideshow
+let lookCurrent = 0;
+const lookTrack = document.getElementById('look-track');
+const lookSlides = lookTrack.querySelectorAll('.look-slide');
+const lookTotal = lookSlides.length;
+
+function moveLook(dir) {
+  lookCurrent = (lookCurrent + dir + lookTotal) % lookTotal;
+  lookTrack.style.transform = `translateX(-${lookCurrent * 100}%)`;
+}
+
+// Auto-advance look slideshow
+setInterval(() => moveLook(1), 5000);
+
+// Init all galleries on load
+document.addEventListener('DOMContentLoaded', () => {
+  ['gal-wolves','gal-mimet','gal-attoveloce','gal-logos','gal-banners','gal-cleaner','gal-mixed'].forEach(initGallery);
+});
+
+// Scroll reveal observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.project-section, .about-section, .services-section, .contact-section, .testimonials-section, .why-section, .process-section').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
+// Download bar visibility
+const downloadBar = document.getElementById('downloadBar');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll > window.innerHeight * 2 && currentScroll < lastScroll) {
+    downloadBar.classList.add('visible');
+  } else {
+    downloadBar.classList.remove('visible');
+  }
+  lastScroll = currentScroll;
+});
+
+// Project index active state
+const thumbs = document.querySelectorAll('.proj-thumb');
+const sections = ['wolves','mimet','attoveloce','logos','banners','cleaner','mixed'];
+window.addEventListener('scroll', () => {
+  sections.forEach((id, i) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+        thumbs.forEach(t => t.classList.remove('active'));
+        if (thumbs[i]) thumbs[i].classList.add('active');
+      }
+    }
+  });
+});
+
+</script>
+
+
+<!-- DOWNLOAD BAR -->
+
+
+</body>
+</html>
